@@ -11,6 +11,8 @@ New-Item -ItemType Directory -Force -Path C:\users\$env:username\Documents\TheoW
 New-Item -ItemType Directory -Force -Path C:\users\$env:username\Documents\TheoWAF\class7\AWS\Books
 New-Item -ItemType Directory -Force -Path C:\users\$env:username\Documents\TheoWAF\class7\AWS\Files
 
+Remove-item -path c:\programdata\chocolatey\ -recursive -force
+
 Start-Transcript -Path "C:\users\$env:username\Documents\TheoWAF\Logs\chocoFix$(Get-Date -UFormat "%Y-%m-%d@%Hh-%Mm-%Ss").log"
 Start-Transcript -Path "Logs\chocoFix$(Get-Date -UFormat "%Y-%m-%d@%Hh-%Mm-%Ss").log" 
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy unrestricted
